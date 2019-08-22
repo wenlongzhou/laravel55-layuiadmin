@@ -1,7 +1,6 @@
 
 ## 安装步骤
 - 修改config/database-b.php 为 database.php，并配置参数
-- composer update
 - php artisan migrate
 - php artisan db:seed
 - php artisan key:generate
