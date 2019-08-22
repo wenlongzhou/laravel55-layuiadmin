@@ -3,7 +3,7 @@ namespace App\Models;
 
 class Permission extends \Spatie\Permission\Models\Permission
 {
-
+    protected $table = 'admin_permission';
 
     //菜单图标
     public function icon()
