@@ -81,30 +81,30 @@ class UserTableSeeder extends Seeder
                             ['name' => 'system.permission.destroy', 'display_name' => '删除权限', 'route' => 'admin.permission.destroy'],
                         ]
                     ],
-                ],
-                [
-                    'name' => 'message.manage',
-                    'display_name' => '消息管理',
-                    'route' => '',
-                    'icon_id' => '24',
-                    'child' => [
-                        [
-                            'name' => 'message.message.mine',
-                            'display_name' => '我的消息',
-                            'route' => 'admin.message.mine',
-                            'icon_id' => '124',
-                        ],
-                        [
-                            'name' => 'message.message',
-                            'display_name' => '消息管理',
-                            'route' => 'admin.message',
-                            'icon_id' => '24',
-                            'child' => [
-                                ['name' => 'message.message.create', 'display_name' => '推送消息', 'route' => 'admin.message.create'],
-                                ['name' => 'message.message.destroy', 'display_name' => '删除消息', 'route' => 'admin.message.destroy'],
-                            ]
-                        ],
-                    ]
+                ]
+            ],
+            [
+                'name' => 'message.manage',
+                'display_name' => '消息管理',
+                'route' => '',
+                'icon_id' => '24',
+                'child' => [
+                    [
+                        'name' => 'message.message.mine',
+                        'display_name' => '我的消息',
+                        'route' => 'admin.message.mine',
+                        'icon_id' => '124',
+                    ],
+                    [
+                        'name' => 'message.message',
+                        'display_name' => '消息管理',
+                        'route' => 'admin.message',
+                        'icon_id' => '24',
+                        'child' => [
+                            ['name' => 'message.message.create', 'display_name' => '推送消息', 'route' => 'admin.message.create'],
+                            ['name' => 'message.message.destroy', 'display_name' => '删除消息', 'route' => 'admin.message.destroy'],
+                        ]
+                    ],
                 ]
             ]
         ];
