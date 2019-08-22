@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,8 +72,6 @@
         });
 
     });
-
-
 </script>
 @yield('script')
 </body>

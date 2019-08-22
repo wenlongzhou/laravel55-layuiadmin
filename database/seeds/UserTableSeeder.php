@@ -24,9 +24,9 @@ class UserTableSeeder extends Seeder
         //用户
         $user = \App\Models\User::create([
             'username' => 'root',
-            'phone' => '18908221080',
+            'phone' => '17511111111',
             'name' => '超级管理员',
-            'email' => 'root@dgg.net',
+            'email' => '',
             'password' => bcrypt('123456'),
             'uuid' => \Faker\Provider\Uuid::uuid()
         ]);
@@ -79,129 +79,6 @@ class UserTableSeeder extends Seeder
                             ['name' => 'system.permission.create', 'display_name' => '添加权限','route'=>'admin.permission.create'],
                             ['name' => 'system.permission.edit', 'display_name' => '编辑权限','route'=>'admin.permission.edit'],
                             ['name' => 'system.permission.destroy', 'display_name' => '删除权限','route'=>'admin.permission.destroy'],
-                        ]
-                    ],
-                ]
-            ],
-            [
-                'name' => 'zixun.manage',
-                'display_name' => '资讯管理',
-                'route' => '',
-                'icon_id' => '100',
-                'child' => [
-                    [
-                        'name' => 'zixun.category',
-                        'display_name' => '分类管理',
-                        'route' => 'admin.category',
-                        'icon_id' => '29',
-                        'child' => [
-                            ['name' => 'zixun.category.create', 'display_name' => '添加分类','route'=>'admin.category.create'],
-                            ['name' => 'zixun.category.edit', 'display_name' => '编辑分类','route'=>'admin.category.edit'],
-                            ['name' => 'zixun.category.destroy', 'display_name' => '删除分类','route'=>'admin.category.destroy'],
-                        ]
-                    ],
-                    [
-                        'name' => 'zixun.tag',
-                        'display_name' => '标签管理',
-                        'route' => 'admin.tag',
-                        'icon_id' => '15',
-                        'child' => [
-                            ['name' => 'zixun.tag.create', 'display_name' => '添加标签','route'=>'admin.tag.create'],
-                            ['name' => 'zixun.tag.edit', 'display_name' => '编辑标签','route'=>'admin.tag.edit'],
-                            ['name' => 'zixun.tag.destroy', 'display_name' => '删除标签','route'=>'admin.tag.destroy'],
-                        ]
-                    ],
-                    [
-                        'name' => 'zixun.article',
-                        'display_name' => '文章管理',
-                        'route' => 'admin.article',
-                        'icon_id' => '89',
-                        'child' => [
-                            ['name' => 'zixun.article.create', 'display_name' => '添加文章','route'=>'admin.article.create'],
-                            ['name' => 'zixun.article.edit', 'display_name' => '编辑文章','route'=>'admin.article.edit'],
-                            ['name' => 'zixun.article.destroy', 'display_name' => '删除文章','route'=>'admin.article.destroy'],
-                        ]
-                    ],
-                ]
-            ],
-            [
-                'name' => 'config.manage',
-                'display_name' => '配置管理',
-                'route' => '',
-                'icon_id' => '28',
-                'child' => [
-                    [
-                        'name' => 'config.site',
-                        'display_name' => '站点配置',
-                        'route' => 'admin.site',
-                        'icon_id' => '25',
-                        'child' => [
-                            ['name' => 'config.site.update', 'display_name' => '更新配置','route'=>'admin.site.update']
-                        ]
-                    ],
-                    [
-                        'name' => 'config.position',
-                        'display_name' => '广告位置',
-                        'route' => 'admin.position',
-                        'icon_id' => '30',
-                        'child' => [
-                            ['name' => 'config.position.create', 'display_name' => '添加广告位','route'=>'admin.position.create'],
-                            ['name' => 'config.position.edit', 'display_name' => '编辑广告位','route'=>'admin.position.edit'],
-                            ['name' => 'config.position.destroy', 'display_name' => '删除广告位','route'=>'admin.position.destroy'],
-                        ]
-                    ],
-                    [
-                        'name' => 'config.advert',
-                        'display_name' => '广告信息',
-                        'route' => 'admin.advert',
-                        'icon_id' => '107',
-                        'child' => [
-                            ['name' => 'config.advert.create', 'display_name' => '添加信息','route'=>'admin.advert.create'],
-                            ['name' => 'config.advert.edit', 'display_name' => '编辑信息','route'=>'admin.advert.edit'],
-                            ['name' => 'config.advert.destroy', 'display_name' => '删除信息','route'=>'admin.advert.destroy'],
-                        ]
-                    ],
-                ]
-            ],
-            [
-                'name' => 'member.manage',
-                'display_name' => '会员管理',
-                'route' => '',
-                'icon_id' => '59',
-                'child' => [
-                    [
-                        'name' => 'member.member',
-                        'display_name' => '账号管理',
-                        'route' => 'admin.member',
-                        'icon_id' => '10',
-                        'child' => [
-                            ['name' => 'member.member.create', 'display_name' => '添加账号','route'=>'admin.member.create'],
-                            ['name' => 'member.member.edit', 'display_name' => '编辑账号','route'=>'admin.member.edit'],
-                            ['name' => 'member.member.destroy', 'display_name' => '删除账号','route'=>'admin.member.destroy'],
-                        ]
-                    ],
-                ]
-            ],
-            [
-                'name' => 'message.manage',
-                'display_name' => '消息管理',
-                'route' => '',
-                'icon_id' => '24',
-                'child' => [
-                    [
-                        'name' => 'message.message.mine',
-                        'display_name' => '我的消息',
-                        'route' => 'admin.message.mine',
-                        'icon_id' => '124',
-                    ],
-                    [
-                        'name' => 'message.message',
-                        'display_name' => '消息管理',
-                        'route' => 'admin.message',
-                        'icon_id' => '24',
-                        'child' => [
-                            ['name' => 'message.message.create', 'display_name' => '推送消息','route'=>'admin.message.create'],
-                            ['name' => 'message.message.destroy', 'display_name' => '删除消息','route'=>'admin.message.destroy'],
                         ]
                     ],
                 ]
